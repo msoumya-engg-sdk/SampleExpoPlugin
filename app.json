@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "DemoExpoExploration",
-    "slug": "DemoExpoExploration",
+    "name": "SampleExpoPlugin",
+    "slug": "SampleExpoPlugin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,16 +12,28 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.moengage.sampleapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.moengage.sampleapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "./plugin",
+        {
+          "appId": "DUMMY_APP_ID",
+          "smallIcon": "assets/icon.png",
+          "_comment": "All config will go in this object"
+        }
+      ]
+    ]
   }
 }
